@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --background: #050520;
+  /* --border-gradient: linear-gradient(from 180deg at 50% 100%,rgba(226,232,255,0),rgba(226,232,255,.12)); */
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -17,11 +19,18 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  background-color: var(--background);
+
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+/* unused styles */
+.grad {
+  background: linear-gradient(180deg,rgba(226,232,255,0) 0%,rgba(226,232,255,.12) 100%)
 }
