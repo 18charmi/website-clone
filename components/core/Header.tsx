@@ -60,7 +60,7 @@ function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:block rounded-full grad-up">
+        <nav className="hidden lg:block rounded-full grad-up backdrop-blur-md ">
           <ul
             className={cx(
               "border border-border-color rounded-[inherit] text-white flex items-center p-1 relative overflow-hidden h-12",
