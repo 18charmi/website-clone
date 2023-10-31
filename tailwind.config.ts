@@ -16,7 +16,8 @@ const config: Config = {
 
       colors: {
         'border-color': '#e2e8ff1a',
-        'text-color': '#e2e8ffbf'
+        'text-color': '#e2e8ff8c',
+        'label-color': '#e2e8ffbf'
       },
     },
   },
