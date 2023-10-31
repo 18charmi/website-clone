@@ -63,14 +63,20 @@ function Header() {
         <nav className="hidden lg:block rounded-full">
           <ul
             className={cx(
-              "border border-border-color rounded-[inherit] text-white flex items-center p-1 relative",
-              { "pr-32": animateHeader },
-              { "pr-4": !animateHeader },
+              "border border-border-color rounded-[inherit] text-white flex items-center p-1 relative overflow-hidden h-12",
+              { "w-[496px]": animateHeader },
+              { "w-[360px]": !animateHeader },
               "trasition ease-in-out duration-500 "
             )}
           >
             {["About", "Blog", "Career", "Changelog"].map((d, i) => (
-              <li key={"navSection" + { i }} className="mr-1 last:mr-0">
+              <li
+                key={"navSection" + { i }}
+                className={cx(
+                  "mr-1 rounded-full hover:bg-border-color",
+                  "transition-colors ease-in-out duration-300"
+                )}
+              >
                 <Link
                   href={`/${d}`}
                   className="flex items-center py-2 px-5 text-text-color text-sm"
@@ -79,18 +85,15 @@ function Header() {
                 </Link>
               </li>
             ))}
-            <li
-              className={cx(
-                "mr-1 last:mr-0 absolute right-1",
-                { "opacity-0 translate-x-10": !animateHeader },
-                { "translate-x-0": animateHeader },
-                "trasition ease-in-out duration-500 "
-              )}
-            >
+            <li className={"flex justify-center items-center "}>
+              <div
+                className="h-[20px] w-[1px] bg-border-color mr-4"
+                id="header-nav-divider"
+              ></div>
               <Button
                 children="Join waitlist"
                 className={cx(
-                  "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white"
+                  "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white w-max"
                 )}
               />
             </li>
