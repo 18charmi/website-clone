@@ -60,18 +60,18 @@ function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:block rounded-full">
+        <nav className="hidden lg:block rounded-full grad-up">
           <ul
             className={cx(
               "border border-border-color rounded-[inherit] text-white flex items-center p-1 relative overflow-hidden h-12",
-              { "w-[496px]": animateHeader },
+              { "w-[506px]": animateHeader },
               { "w-[360px]": !animateHeader },
               "trasition ease-in-out duration-500 "
             )}
           >
             {["About", "Blog", "Career", "Changelog"].map((d, i) => (
               <li
-                key={"navSection" + { i }}
+                key={`navSection ${i}`}
                 className={cx(
                   "mr-1 rounded-full hover:bg-border-color",
                   "transition-colors ease-in-out duration-300"
@@ -102,7 +102,7 @@ function Header() {
         <Button
           children="Join waitlist"
           className={cx(
-            "border border-border-color bg-gradient-to-t from-white via-slate-400 to-transparent bg-clip-text text-transparent",
+            "border border-border-color grad-down bg-clip-text text-slate-200",
             { "opacity-0 translate-x-5": animateHeader },
             "trasition ease-in-out duration-500 "
           )}

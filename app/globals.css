@@ -30,7 +30,10 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
-/* unused styles */
-.grad {
+/* custom gradient styles */
+.grad-up {
+  background: linear-gradient(0deg,rgba(226,232,255,0) 0%,rgba(226,232,255,.12) 100%)
+}
+.grad-down {
   background: linear-gradient(180deg,rgba(226,232,255,0) 0%,rgba(226,232,255,.12) 100%)
 }
