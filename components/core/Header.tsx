@@ -91,22 +91,24 @@ function Header() {
                 id="header-nav-divider"
               ></div>
               <Button
-                children="Join waitlist"
                 className={cx(
                   "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white w-max"
                 )}
-              />
+              >
+                Join waitlist
+              </Button>
             </li>
           </ul>
         </nav>
         <Button
-          children="Join waitlist"
           className={cx(
             "border border-border-color grad-down bg-clip-text text-slate-200",
             { "opacity-0 translate-x-5": animateHeader },
             "trasition ease-in-out duration-500 "
           )}
-        />
+        >
+          Join waitlist
+        </Button>
       </div>
     </header>
   );
