@@ -20,12 +20,17 @@ const config: Config = {
         'text-color': '#e2e8ff8c',
         'label-color': '#e2e8ffbf'
       },
-      
+
       animation: {
+        'increase-width': 'increase-width 10s ease-in-out infinite',
         'gradientBorder': 'rotation 5s linear infinite'
       },
 
       keyframes: {
+        'increase-width': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        },
         rotation: {
           '0%': {
             '--gradient-angle': '0deg'
