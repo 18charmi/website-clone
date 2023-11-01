@@ -16,16 +16,27 @@ const config: Config = {
 
       colors: {
         'background-color': 'var(--background)',
-        'border-color': '#e2e8ff1a',
+        'border-color': 'var(--border-color)',
         'text-color': '#e2e8ff8c',
         'label-color': '#e2e8ffbf'
       },
-      
+
       animation: {
+        'border-fade-in-out': 'fade-in-out 5s ease-in-out infinite',
+        'increase-width': 'increase-width 10s ease-in-out infinite',
         'gradientBorder': 'rotation 5s linear infinite'
       },
 
       keyframes: {
+        'fade-in-out': {
+          '0%': { "border-color": 'transparent' },
+          '50%': { "border-color": 'var(--border-color)' },
+          '100%': { "border-color": 'transparent' },
+        },
+        'increase-width': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        },
         rotation: {
           '0%': {
             '--gradient-angle': '0deg'
